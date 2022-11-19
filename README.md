@@ -45,4 +45,6 @@ Multithreading işlemlerinin nasıl yapıldığını incelemek için  [mutlithre
 2. [Multithreading Pyhton](https://www.geeksforgeeks.org/multithreading-python-set-1/)
 3. [Tkinter, İbrahim EFE @WriteandLearn](https://www.youtube.com/playlist?list=PLSmHiN0iazy_qX_6Tmecj4tTOefqh2-m2)
 4. [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV)
+5. [TomSchimansky, Custom Tkinter](https://github.com/TomSchimansky/CustomTkinter)
+6. [CSV dosyalarıyla işlemler](https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/)
 
