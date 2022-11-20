@@ -1,3 +1,5 @@
+import mutlithreading as th
+
 from tkinter import *
 from tkinter import ttk
 import tkinter.messagebox
@@ -10,8 +12,8 @@ customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "gr
 
 class App(customtkinter.CTk):
 
-    WIDTH = 1280
-    HEIGHT = 720
+    WIDTH = 900
+    HEIGHT = 500
 
     def __init__(self):
         super().__init__()
@@ -79,29 +81,32 @@ class App(customtkinter.CTk):
                                               text_font=("Roboto Medium", -16))  # font name and size in px
         self.label_1.grid(row=1, column=0, pady=10, padx=10)
 
-        self.Parametre1= customtkinter.CTkOptionMenu(master=self.frame_left,
+        self.Sütun1= customtkinter.CTkOptionMenu(master=self.frame_left,
                                                     values=["Product", "Issue"])
-        self.Parametre1.grid(row=2, column=0, pady=10, padx=20)
+        self.Sütun1.grid(row=2, column=0, pady=10, padx=20)
     
         
         self.ThreadSayısı = customtkinter.CTkEntry(master=self.frame_left,
                                             width=120,
                                             placeholder_text="Thread Sayısı")
         self.ThreadSayısı.grid(row=4, column=0, pady=10, padx=20)
+
+        self.BenzerlikOranı_Label = customtkinter.CTkLabel(master=self.frame_left,width=150,fg_color="white",text="Benzerlik Oranı : %50")
+        self.BenzerlikOranı_Label.grid(row=5, column=0,pady=10)
             
-        self.slider_1 = customtkinter.CTkSlider(master=self.frame_left,
+        self.BenzerlikOranı_Slider = customtkinter.CTkSlider(master=self.frame_left,
                                                 command=self.change,
                                                 from_=0,
                                                 number_of_steps=10,
                                                 to=100
                                                 )
-        self.slider_1.grid(row=6, column=0, columnspan=2, pady=10, padx=20, sticky="we")
+        self.BenzerlikOranı_Slider.grid(row=6, column=0, columnspan=2, pady=10, padx=20, sticky="we")
 
         self.button_1 = customtkinter.CTkButton(master=self.frame_left,
                                                 text="ARA",
                                                 border_width=2,
                                                 fg_color=None,
-                                                command=self.button_event)
+                                                command=self.search_button_event)
         self.button_1.grid(row=10, column=0, pady=20, padx=20)
 
         self.label_mode = customtkinter.CTkLabel(master=self.frame_left, text="Appearance Mode:")
@@ -114,14 +119,9 @@ class App(customtkinter.CTk):
     
     
     def change(self,val):
-        print(str(val))
-        self.BenzerlikOranı = customtkinter.CTkLabel(master=self.frame_left,width=150,fg_color="white",text="Benzerlik Oranı %" + str(val))
-        self.BenzerlikOranı.grid(row=5, column=0,pady=10)
+        self.BenzerlikOranı_Label = customtkinter.CTkLabel(master=self.frame_left,width=150,fg_color="white",text="Benzerlik Oranı : %"+str(int(val)))
+        self.BenzerlikOranı_Label.grid(row=5, column=0,pady=10)
 
-
-    def button_event(self):
-        self.label_mode2 = customtkinter.CTkLabel(master=self.frame_left,text="" + str(self.ThreadSayısı.get()))
-        self.label_mode2.grid(row=11, column=0, pady=0, padx=20, sticky="w")
 
     def change_appearance_mode(self, new_appearance_mode):
         customtkinter.set_appearance_mode(new_appearance_mode)
@@ -129,7 +129,15 @@ class App(customtkinter.CTk):
     def on_closing(self, event=0):
         self.destroy()
 
+    
+    def search_button_event(self):
+        similarityValue=self.BenzerlikOranı_Slider.get()
+        columsValue = self.Sütun1.get()
+        threadValue= int(self.ThreadSayısı.get())
 
+        th.threading(columsValue,similarityValue,threadValue)
+
+        
 if __name__ == "__main__":
     app = App()
     app.mainloop()
