@@ -1,32 +1,180 @@
 ,Product,Issue,Company,State,ZIP code,Complaint ID
-0,Checking or savings account,Managing an account,NAVY FEDERAL CREDIT UNION,FL,328XX,3238275
-1,Checking or savings account,Managing an account,BOEING EMPLOYEES CREDIT UNION,WA,98204,3238228
+0,Checking savings account,Managing account,NAVY FEDERAL CREDIT UNION,FL,328XX,3238275
+1,Checking savings account,Managing account,BOEING EMPLOYEES CREDIT UNION,WA,98204,3238228
 2,Debt collection,Communication tactics,CURO Intermediate Holdings,TX,751XX,3237964
-3,Credit reporting credit repair services or other personal consumer reports,Incorrect information on your report,Ad Astra Recovery Services Inc,LA,708XX,3238479
-4,Checking or savings account,Managing an account,ALLY FINANCIAL INC,AZ,85205,3238460
-5,Mortgage,Closing on  mortgge,Statebridge Company,NJ,08302,3237885
-6,Student loan,Struggling to repay your loan,Student Loan Direct,TX,773XX,3238221
-7,Debt collection,Attempts to collect debt not owed,Diversified Consultants Inc,SC,296XX,3238545
-8,Credit reporting credit repair services or other personal consumer reports,Incorrect information on your report,CONTRACT CALLERS INC,MD,20774,3238458
-9,Vehicle loan or lease,Struggling to pay your loan,ALLY FINANCIAL INC,NV,891XX,3238036
-10,Debt collection,False statements or representation,MiraMed Revenue Group LLC,VA,23156,3237941
-11,Debt collection,False statements or representation,Commonwealth Financial Systems Inc,TX,774XX,3237971
-12,Credit reporting credit repair services or other personal consumer reports,Problem with  credit reporting compnys investigtion into n existing problem,ALLY FINANCIAL INC,TX,774XX,3237837
-13,Debt collection,Took or threatened to take negative or legal action,NAVY FEDERAL CREDIT UNION,FL,346XX,3237928
-14,Debt collection,Communication tactics,MERCANTILE ADJUSTMENT BUREAU LLC,NY,14609,3238682
-15,Debt collection,Attempts to collect debt not owed,HCFS Health Care Financial Services Inc,AZ,852XX,3237088
-16,Checking or savings account,Managing an account,ALLY FINANCIAL INC,CO,81302,3237160
-17,Debt collection,False statements or representation,Diversified Consultants Inc,NJ,087XX,3236983
-18,Debt collection,False statements or representation,ALLY FINANCIAL INC,MI,48185,3237404
-19,Debt collection,Written notification about debt,Weltman Weinberg  Reis Co LPA,OH,432XX,3236857
-20,Debt collection,Threatened to contact someone or share information improperly,CASHCALL INC,CA,944XX,3236737
-21,Debt collection,Attempts to collect debt not owed,Ability Recovery Services LLC,NC,28216,3237833
-22,Credit reporting credit repair services or other personal consumer reports,Incorrect information on your report,NISSAN MOTOR ACCEPTANCE CORPORATION,TX,797XX,3237655
-23,Credit reporting credit repair services or other personal consumer reports,Improper use of your report,FIRST ADVANTAGE CORPORATION,UT,84401,3237100
-24,Debt collection,Written notification about debt,Midwest Fidelity Services LLC,IL,60025,3237425
-25,Debt collection,Attempts to collect debt not owed,HCFS Health Care Financial Services Inc,FL,33056,3236953
-26,Debt collection,Written notification about debt,NICHOLAS FINANCIAL INC,FL,338XX,3237247
-27,Debt collection,Attempts to collect debt not owed,SFS Inc,NC,28752,3236773
-28,Debt collection,Took or threatened to take negative or legal action,CURO Intermediate Holdings,ME,04042,3237657
-29,Credit reporting credit repair services or other personal consumer reports,Incorrect information on your report,Diversified Consultants Inc,FL,328XX,3237831
-30,Debt collection,Attempts to collect debt not owed,Ad Astra Recovery Services Inc,OR,972XX,3237515
+3,Credit reporting credit repair services personal consumer reports,Incorrect information report,Ad Astra Recovery Services Inc,LA,708XX,3238479
+4,Checking savings account,Managing account,ALLY FINANCIAL INC.,AZ,85205,3238460
+5,Mortgage,Closing mortgge,Statebridge Company,NJ,08302,3237885
+7,Student loan,Struggling repay loan,Student Loan Direct,TX,773XX,3238221
+8,Debt collection,Attempts collect debt owed,"Diversified Consultants, Inc.",SC,296XX,3238545
+9,Credit reporting credit repair services personal consumer reports,Incorrect information report,CONTRACT CALLERS INC,MD,20774,3238458
+10,Vehicle loan lease,Struggling pay loan,ALLY FINANCIAL INC.,NV,891XX,3238036
+11,Debt collection,False statements representation,MiraMed Revenue Group LLC,VA,23156,3237941
+13,Debt collection,False statements representation,"Commonwealth Financial Systems, Inc.",TX,774XX,3237971
+14,Credit reporting credit repair services personal consumer reports,Problem credit reporting compnys investigtion n existing problem,ALLY FINANCIAL INC.,TX,774XX,3237837
+15,Debt collection,Took threatened take negative legal action,NAVY FEDERAL CREDIT UNION,FL,346XX,3237928
+16,Debt collection,Communication tactics,"MERCANTILE ADJUSTMENT BUREAU, LLC",NY,14609,3238682
+17,Debt collection,Attempts collect debt owed,"HCFS Health Care Financial Services, Inc.",AZ,852XX,3237088
+19,Checking savings account,Managing account,ALLY FINANCIAL INC.,CO,81302,3237160
+20,Debt collection,False statements representation,"Diversified Consultants, Inc.",NJ,087XX,3236983
+21,Debt collection,False statements representation,ALLY FINANCIAL INC.,MI,48185,3237404
+22,Debt collection,Written notification debt,"Weltman, Weinberg & Reis Co., L.P.A.",OH,432XX,3236857
+23,Debt collection,Threatened contact someone share information improperly,"CASHCALL, INC.",CA,944XX,3236737
+24,Debt collection,Attempts collect debt owed,"Ability Recovery Services, LLC",NC,28216,3237833
+25,Credit reporting credit repair services personal consumer reports,Incorrect information report,NISSAN MOTOR ACCEPTANCE CORPORATION,TX,797XX,3237655
+26,Credit reporting credit repair services personal consumer reports,Improper use report,FIRST ADVANTAGE CORPORATION,UT,84401,3237100
+27,Debt collection,Written notification debt,"Midwest Fidelity Services, LLC",IL,60025,3237425
+28,Debt collection,Attempts collect debt owed,"HCFS Health Care Financial Services, Inc.",FL,33056,3236953
+29,Debt collection,Written notification debt,NICHOLAS FINANCIAL INC.,FL,338XX,3237247
+30,Debt collection,Attempts collect debt owed,"SFS, Inc",NC,28752,3236773
+31,Debt collection,Took threatened take negative legal action,CURO Intermediate Holdings,ME,04042,3237657
+32,Credit reporting credit repair services personal consumer reports,Incorrect information report,"Diversified Consultants, Inc.",FL,328XX,3237831
+33,Debt collection,Attempts collect debt owed,Ad Astra Recovery Services Inc,OR,972XX,3237515
+34,Mortgage,Closing mortgge,"QUICKEN LOANS, INC.",NJ,08619,3237320
+35,Credit reporting credit repair services personal consumer reports,Incorrect information report,"The CMI Group, Inc.",SC,297XX,3237630
+36,Debt collection,Written notification debt,"NCC Business Services, Inc.",NY,132XX,3236839
+37,Debt collection,Attempts collect debt owed,Sequoia Financial Services,CA,91205,3237250
+38,Debt collection,Attempts collect debt owed,"USCB, INC.",AZ,85713,3236808
+40,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",NC,276XX,3236855
+41,Debt collection,Communication tactics,ERC,NC,280XX,3237137
+43,Mortgage,Trouble payment process,"CITIBANK, N.A.",NJ,07735,3237284
+45,Vehicle loan lease,Problems end loan lease,ALLY FINANCIAL INC.,TX,750XX,3236888
+47,Vehicle loan lease,Incorrect information report,NAVY FEDERAL CREDIT UNION,VA,235XX,3237300
+48,Debt collection,Attempts collect debt owed,"Convergent Resources, Inc.",MI,48162,3237758
+49,Debt collection,Communication tactics,"McCarthy, Burgess & Wolff, Inc.",TX,782XX,3237483
+50,Credit card prepaid card,Fees interest,NAVY FEDERAL CREDIT UNION,WI,546XX,3237779
+51,Debt collection,Written notification debt,GETM INCORPORATED,CA,924XX,3236826
+53,Debt collection,Written notification debt,Ad Astra Recovery Services Inc,TX,777XX,3237308
+54,Checking savings account,Problem lender compny chrging ccount,NAVY FEDERAL CREDIT UNION,MD,207XX,3237252
+55,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",CA,949XX,3236867
+57,Vehicle loan lease,Managing loan lease,ALLY FINANCIAL INC.,MN,550XX,3236982
+58,Debt collection,Communication tactics,"Diversified Consultants, Inc.",NV,89119,3237211
+60,Debt collection,Attempts collect debt owed,"EQUIFAX, INC.",TX,77082,3236934
+62,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",GA,30126,3236941
+63,Credit reporting credit repair services personal consumer reports,Problem credit reporting compnys investigtion n existing problem,"EQUIFAX, INC.",NC,28540,3236914
+64,Debt collection,Attempts collect debt owed,"Sa-Vit Enterprises, Inc.",NJ,070XX,3236776
+65,Debt collection,Attempts collect debt owed,CHARLESTON AREA MEDICAL CENTER,WV,26003,3236752
+66,Checking savings account,Managing account,ALLY FINANCIAL INC.,NV,89123,3237556
+67,Debt collection,Attempts collect debt owed,Perfection Collection,FL,329XX,3235461
+68,Debt collection,Took threatened take negative legal action,CNG FINANCIAL CORPORATION,IL,604XX,3235984
+69,Debt collection,Attempts collect debt owed,"The CMI Group, Inc.",FL,329XX,3235493
+70,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",FL,339XX,3235467
+71,Credit reporting credit repair services personal consumer reports,Problem credit reporting compnys investigtion n existing problem,"EQUIFAX, INC.",NY,104XX,3235814
+72,Debt collection,Attempts collect debt owed,"ASSET MANAGEMENT OUTSOURCING, INC.",GA,30331,3236113
+73,Debt collection,Attempts collect debt owed,NAVY FEDERAL CREDIT UNION,LA,70115,3236254
+74,Debt collection,Attempts collect debt owed,"NRA Group, LLC",MA,016XX,3235537
+75,Checking savings account,Problem caused funds low,BB&T CORPORATION,GA,30510,3237603
+76,Credit reporting credit repair services personal consumer reports,Problem credit reporting compnys investigtion n existing problem,"EQUIFAX, INC.",CT,06514,3235583
+77,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",NY,109XX,3235560
+78,Debt collection,Attempts collect debt owed,Ad Astra Recovery Services Inc,TX,77055,3236263
+79,Debt collection,Attempts collect debt owed,"Diversified Consultants, Inc.",TX,78043,3236189
+80,Credit reporting credit repair services personal consumer reports,Problem credit reporting compnys investigtion n existing problem,"EQUIFAX, INC.",WA,983XX,3235513
+81,Credit reporting credit repair services personal consumer reports,Incorrect information report,AMERICAN HONDA FINANCE CORP,CA,90025,3236078
+82,Credit reporting credit repair services personal consumer reports,Unable get credit report credit score,"EQUIFAX, INC.",MI,48098,3235818
+83,Credit reporting credit repair services personal consumer reports,Improper use report,"EQUIFAX, INC.",OH,43123,3235573
+84,Credit reporting credit repair services personal consumer reports,Credit monitoring identity theft protection services,"EQUIFAX, INC.",FL,328XX,3235564
+85,Credit reporting credit repair services personal consumer reports,Unable get credit report credit score,"EQUIFAX, INC.",NY,11801,3235480
+86,Payday loan title loan personal loan,Struggling pay loan,NAVY FEDERAL CREDIT UNION,GA,30097,3236427
+87,Checking savings account,Managing account,"Certegy Holdings, LLC",GA,31794,3235835
+88,Mortgage,Trouble payment process,"BAYVIEW LOAN SERVICING, LLC",NY,14120,3235820
+89,Mortgage,Struggling pay mortgage,PRIMARY RESIDENTIAL MORTGAGE,CA,92877,3236502
+90,Debt collection,Attempts collect debt owed,Millco Management,PA,193XX,3235791
+91,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",KY,40220,3235924
+92,Debt collection,Attempts collect debt owed,"Illinois Collection Service, Inc.",IL,60623,3236364
+93,Mortgage,Applying mortgge refinncing existing mortgge,ALLY FINANCIAL INC.,CA,94565,3237406
+94,Payday loan title loan personal loan,Charged fees interest didnt expect,NAVY FEDERAL CREDIT UNION,VA,23831,3236287
+96,Credit reporting credit repair services personal consumer reports,Incorrect information report,"Byrider Franchising, LLC",IL,604XX,3235991
+97,Debt collection,Attempts collect debt owed,Ad Astra Recovery Services Inc,TX,76712,3236213
+98,Credit reporting credit repair services personal consumer reports,Improper use report,"EQUIFAX, INC.",GA,302XX,3235494
+100,Debt collection,Written notification debt,"Ability Recovery Services, LLC",PA,191XX,3235603
+101,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",FL,335XX,3235575
+102,Debt collection,Attempts collect debt owed,"NRA Group, LLC",FL,322XX,3235801
+103,Debt collection,Written notification debt,"ONLINE Information Services, Inc.",GA,31520,3236470
+104,Credit reporting credit repair services personal consumer reports,Improper use report,"EQUIFAX, INC.",TN,379XX,3235574
+105,Debt collection,Communication tactics,First Associates Loan Servicing LLC,ID,836XX,3235972
+106,Debt collection,Communication tactics,Oracle Financial Group LLC.,TX,773XX,3236088
+107,Credit reporting credit repair services personal consumer reports,Problem credit reporting compnys investigtion n existing problem,LEXISNEXIS,NY,11218,3235757
+108,Checking savings account,Managing account,ALLY FINANCIAL INC.,GA,31907,3235718
+109,Debt collection,Attempts collect debt owed,CURO Intermediate Holdings,TX,77055,3236567
+110,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",CA,90211,3235565
+111,Debt collection,Attempts collect debt owed,"Harris & Harris, Ltd.",IL,606XX,3235519
+112,Debt collection,Threatened contact someone share information improperly,D. SCOTT CARRUTHERS,CA,944XX,3236729
+113,Credit reporting credit repair services personal consumer reports,Problem credit reporting compnys investigtion n existing problem,"EQUIFAX, INC.",MO,64130,3235543
+114,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",UT,840XX,3235525
+115,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",CO,810XX,3235553
+116,Debt collection,Communication tactics,"Webcollex, LLC",VA,222XX,3236357
+117,Debt collection,Took threatened take negative legal action,National Business Factors,NV,89431,3236297
+118,Mortgage,Struggling pay mortgage,NATIONSTAR MORTGAGE,CA,92026,3237673
+119,Credit reporting credit repair services personal consumer reports,Problem credit reporting compnys investigtion n existing problem,"HCFS Health Care Financial Services, Inc.",GA,303XX,3236703
+120,Debt collection,Attempts collect debt owed,MiraMed Revenue Group LLC,NY,109XX,3236012
+121,Debt collection,Attempts collect debt owed,Perfection Collection,GA,303XX,3236759
+122,Credit reporting credit repair services personal consumer reports,Incorrect information report,"ONLINE Information Services, Inc.",TN,38116,3236270
+123,Debt collection,Attempts collect debt owed,Hillcrest Davidson & Assoc,PA,191XX,3236160
+124,Credit reporting credit repair services personal consumer reports,Incorrect information report,ALLY FINANCIAL INC.,CA,91202,3235709
+125,Debt collection,Written notification debt,Riverwalk Financial Corporation,OH,442XX,3235722
+126,Debt collection,Written notification debt,"Associated Credit Services, Inc.",TX,79747,3236360
+127,Debt collection,Communication tactics,"Diversified Consultants, Inc.",LA,704XX,3235462
+128,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",FL,33436,3235509
+129,Debt collection,Attempts collect debt owed,"GLA Collection Company, Inc.",IN,462XX,3235725
+130,Credit reporting credit repair services personal consumer reports,Problem credit reporting compnys investigtion n existing problem,FIFTH THIRD FINANCIAL CORPORATION,NY,14221,3236063
+132,Vehicle loan lease,Problem credit reporting compnys investigtion n existing problem,AMERICAN HONDA FINANCE CORP,RI,028XX,3236110
+133,Debt collection,Attempts collect debt owed,"ProCollect, Inc",TX,775XX,3235529
+134,Debt collection,Communication tactics,"Pendrick Capital Partners Holding, LLC",DC,200XX,3236057
+135,Credit card prepaid card,Incorrect information report,Army and Air Force Exchange Service,CA,913XX,3235595
+136,Debt collection,Attempts collect debt owed,"AMCOL Systems, Inc.",TX,782XX,3236342
+137,Debt collection,False statements representation,"ASSET MANAGEMENT OUTSOURCING, INC.",VA,22031,3235963
+139,Checking savings account,Closing account,U.S. BANCORP,MD,21117,3235783
+140,Debt collection,Attempts collect debt owed,"Keynote Consulting, Inc.",CA,953XX,3235973
+141,Payday loan title loan personal loan,Struggling pay loan,Ad Astra Recovery Services Inc,CA,92782,3236629
+142,Vehicle loan lease,Managing loan lease,ALLY FINANCIAL INC.,NJ,08701,3235763
+143,Debt collection,Took threatened take negative legal action,American Coradius International LLC,WA,98110,3236260
+144,Debt collection,Written notification debt,"The CMI Group, Inc.",SC,297XX,3236542
+145,Credit reporting credit repair services personal consumer reports,Improper use report,"EQUIFAX, INC.",MD,20785,3235471
+146,Mortgage,Trouble payment process,CARDINAL FINANCIAL COMPANY,IL,601XX,3234471
+147,Debt collection,Attempts collect debt owed,NAVY FEDERAL CREDIT UNION,FL,33322,3234253
+148,Credit reporting credit repair services personal consumer reports,Improper use report,"ONEMAIN FINANCIAL HOLDINGS, LLC.",PA,152XX,3234244
+149,Credit reporting credit repair services personal consumer reports,Incorrect information report,"Convergent Resources, Inc.",GA,30328,3233798
+150,Credit card prepaid card,Advertising marketing including promotional offers,AMERICAN EXPRESS COMPANY,IL,602XX,3234200
+151,Money transfer virtual currency money service,Money available promised,PAYPAL HOLDINGS INC.,CT,063XX,3235143
+153,Payday loan title loan personal loan,Problem payoff process end loan,NAVY FEDERAL CREDIT UNION,MS,39073,3234164
+154,Debt collection,Attempts collect debt owed,"Sequium Asset Solutions, LLC",KS,672XX,3235429
+155,Debt collection,Attempts collect debt owed,ALLY FINANCIAL INC.,NC,282XX,3234536
+158,Debt collection,Communication tactics,"Maury Cobb, Attorney at Law, LLC",CA,924XX,3233668
+159,Debt collection,Attempts collect debt owed,"Commonwealth Financial Systems, Inc.",TX,750XX,3235607
+160,Credit reporting credit repair services personal consumer reports,Problem credit reporting compnys investigtion n existing problem,"Capital Accounts, LLC",TX,760XX,3235181
+161,Mortgage,Struggling pay mortgage,OCWEN LOAN SERVICING LLC,DE,197XX,3234232
+162,Debt collection,Attempts collect debt owed,"Stone Creek Financial, Inc",OH,432XX,3234998
+163,Debt collection,Attempts collect debt owed,"Convergent Resources, Inc.",CT,06460,3234578
+164,Debt collection,Attempts collect debt owed,SYNCHRONY FINANCIAL,CA,90221,3234900
+165,Credit reporting credit repair services personal consumer reports,Incorrect information report,"Colony Brands, Inc.",WI,532XX,3234467
+166,Credit reporting credit repair services personal consumer reports,Incorrect information report,"Diversified Consultants, Inc.",CT,064XX,3233672
+167,Debt collection,Written notification debt,SYNCHRONY FINANCIAL,PR,009XX,3234885
+168,Student loan,Dealing lender servicer,AES/PHEAA,PA,19026,3235328
+169,Credit reporting credit repair services personal consumer reports,Incorrect information report,Rent Recovery Solutions,GA,30328,3234043
+170,Debt collection,Took threatened take negative legal action,"Emmett L. Goodman, Jr., LLC",GA,312XX,3234802
+171,Debt collection,False statements representation,Collection Bureau Incorporated,ID,83715,3235195
+172,Debt collection,Attempts collect debt owed,"Ability Recovery Services, LLC",PA,19134,3234782
+173,Debt collection,Written notification debt,"Credit Protection Association, L.P.",AZ,85710,3235104
+174,Debt collection,Attempts collect debt owed,NAVY FEDERAL CREDIT UNION,FL,33322,3234266
+175,Debt collection,Threatened contact someone share information improperly,Northern Resolution Services,OH,454XX,3235410
+176,Debt collection,Attempts collect debt owed,"ONLINE Information Services, Inc.",AL,358XX,3234698
+177,Debt collection,Attempts collect debt owed,"Diversified Consultants, Inc.",AZ,850XX,3234554
+178,Credit card prepaid card,Getting credit card,NAVY FEDERAL CREDIT UNION,TX,75287,3234768
+180,Debt collection,Attempts collect debt owed,NAVY FEDERAL CREDIT UNION,CA,920XX,3233866
+181,Debt collection,Took threatened take negative legal action,"Diversified Consultants, Inc.",LA,704XX,3235446
+182,Debt collection,Attempts collect debt owed,Monterey Financial Services LLC,VA,236XX,3235086
+183,Credit card prepaid card,Getting credit card,SYNCHRONY FINANCIAL,SC,29644,3235314
+185,Debt collection,False statements representation,TH Professional & Medical Collections LTD,IL,616XX,3235372
+187,Debt collection,Attempts collect debt owed,"Designed Receivable Solultions, Inc.",CA,902XX,3234978
+188,Credit card prepaid card,Fees interest,Army and Air Force Exchange Service,FL,33511,3234787
+189,Mortgage,Applying mortgge refinncing existing mortgge,NATIONSTAR MORTGAGE,CA,92026,3234830
+190,Credit reporting credit repair services personal consumer reports,Incorrect information report,STERLING INFOSYSTEMS INC,CA,90706,3234228
+191,Credit reporting credit repair services personal consumer reports,Incorrect information report,NAVY FEDERAL CREDIT UNION,FL,33030,3234914
+192,Debt collection,Attempts collect debt owed,"Southwest Credit Systems, L.P.",NJ,070XX,3234635
+194,Debt collection,Communication tactics,ERC,FL,339XX,3234221
+195,Money transfer virtual currency money service,Problem customer service,NAVY FEDERAL CREDIT UNION,GA,31907,3235022
+196,Debt collection,Written notification debt,"General Business Recoveries, Inc.",AZ,85710,3234621
+197,Checking savings account,Managing account,NAVY FEDERAL CREDIT UNION,CA,955XX,3234819
+198,Credit reporting credit repair services personal consumer reports,Improper use report,AMERICAN EXPRESS COMPANY,PA,152XX,3234230
+199,Credit reporting credit repair services personal consumer reports,Incorrect information report,"EQUIFAX, INC.",TX,776XX,3234606
+201,Mortgage,Trouble payment process,"FLAGSTAR BANK, FSB",TX,775XX,3234288
