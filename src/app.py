@@ -33,6 +33,17 @@ class App(customtkinter.CTk):
         self.frame_right = customtkinter.CTkFrame(master=self)
         self.frame_right.grid(row=0, column=1, sticky="nswe", padx=20, pady=20)
 
+        # ============ frame_right ============
+
+        # configure grid layout (3x7)
+        self.frame_right.rowconfigure((0, 1, 2, 3), weight=1)
+        self.frame_right.rowconfigure(7, weight=10)
+        self.frame_right.columnconfigure((0, 1), weight=1)
+        self.frame_right.columnconfigure(2, weight=0)
+
+        self.frame_info = customtkinter.CTkFrame(master=self.frame_right)
+        self.frame_info.grid(row=0, column=0, columnspan=2, rowspan=4, pady=20, padx=20, sticky="nsew")
+
         # ============ frame_left ============
 
         # configure grid layout (1x11)
@@ -46,6 +57,9 @@ class App(customtkinter.CTk):
                                               text_font=("Roboto Medium", -16))  # font name and size in px
         self.label_1.grid(row=1, column=0, pady=10, padx=10)
 
+
+        #---------- Sütun Bilgileri -------
+
         self.combobox_1 = customtkinter.CTkOptionMenu(master=self.frame_left,
                                                     values=["Product", "Issue"])
         self.combobox_1.grid(row=2, column=0, pady=10, padx=20)
@@ -54,17 +68,31 @@ class App(customtkinter.CTk):
                                                     values=["2. Sütun","Product", "Issue"])
         self.combobox_2.grid(row=3, column=0, pady=10, padx=20)
 
+
+        #----- THREAD SAYISI ----
+
         self.entry = customtkinter.CTkEntry(master=self.frame_left,
                                             width=120,
                                             placeholder_text="Thread Sayısı")
         self.entry.grid(row=4, column=0, pady=10, padx=20)
 
-        self.button_5 = customtkinter.CTkButton(master=self.frame_left,
+    
+        self.progressbar = customtkinter.CTkProgressBar(master=self.frame_info)
+        self.progressbar.grid(row=7, column=0, sticky="ew", padx=15, pady=15)
+
+        self.slider_2 = customtkinter.CTkSlider(master=self.frame_left,
+                                                command=self.progressbar.set)
+        self.slider_2.grid(row=5, column=0, columnspan=2, pady=10, padx=20, sticky="we")
+
+        self.slider_2.set(0.7)
+        self.progressbar.set(0.5)
+
+        self.button_1 = customtkinter.CTkButton(master=self.frame_left,
                                                 text="ARA",
                                                 border_width=2,
                                                 fg_color=None,
                                                 command=self.button_event)
-        self.button_5.grid(row=5, column=0, pady=20, padx=20)
+        self.button_1.grid(row=7, column=0, pady=20, padx=20)
 
         self.label_mode = customtkinter.CTkLabel(master=self.frame_left, text="Appearance Mode:")
         self.label_mode.grid(row=9, column=0, pady=0, padx=20, sticky="w")
