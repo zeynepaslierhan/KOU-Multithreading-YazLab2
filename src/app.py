@@ -34,6 +34,8 @@ class App(customtkinter.CTk):
         self.frame_right = customtkinter.CTkFrame(master=self)
         self.frame_right.grid(row=0, column=1, sticky="nswe", padx=20, pady=20)
 
+        
+
         # ============ frame_right ============
 
         # configure grid layout (3x7)
@@ -45,75 +47,83 @@ class App(customtkinter.CTk):
         self.frame_info = customtkinter.CTkFrame(master=self.frame_right)
         self.frame_info.grid(row=0, column=0, columnspan=2, rowspan=4, pady=20, padx=20, sticky="nsew")
 
+        # ============ frame_info ============
+
+        # configure grid layout (1x1)
+        self.frame_info.rowconfigure(0, weight=1)
+        self.frame_info.columnconfigure(0, weight=1)
+
+        self.label_info_1 = customtkinter.CTkLabel(master=self.frame_info,
+                                                   text="CTkLabel: Lorem ipsum dolor sit,\n" +
+                                                        "amet consetetur sadipscing elitr,\n" +
+                                                        "sed diam nonumy eirmod tempor" ,
+                                                   height=100,
+                                                   corner_radius=6,  # <- custom corner radius
+                                                   fg_color=("white", "gray38"),  # <- custom tuple-color
+                                                   justify=tkinter.LEFT)
+        self.label_info_1.grid(column=0, row=0, sticky="nwe", padx=15, pady=15)
+
+
         # ============ frame_left ============
 
         # configure grid layout (1x11)
         self.frame_left.grid_rowconfigure(0, minsize=10)   # empty row with minsize as spacing
-        self.frame_left.grid_rowconfigure(5, weight=1)  # empty row as spacing
+        self.frame_left.grid_rowconfigure(6, weight=1)  # empty row as spacing
         self.frame_left.grid_rowconfigure(8, minsize=20)    # empty row with minsize as spacing
-        self.frame_left.grid_rowconfigure(11, minsize=10)  # empty row with minsize as spacing
+        self.frame_left.grid_rowconfigure(15, minsize=10)  # empty row with minsize as spacing
 
         self.label_1 = customtkinter.CTkLabel(master=self.frame_left,
                                               text="İstenilen verileri \n giriniz",
                                               text_font=("Roboto Medium", -16))  # font name and size in px
         self.label_1.grid(row=1, column=0, pady=10, padx=10)
 
-
-        #---------- Sütun Bilgileri -------
-
-        self.combobox_1 = customtkinter.CTkOptionMenu(master=self.frame_left,
+        self.Parametre1= customtkinter.CTkOptionMenu(master=self.frame_left,
                                                     values=["Product", "Issue"])
-        self.combobox_1.grid(row=2, column=0, pady=10, padx=20)
+        self.Parametre1.grid(row=2, column=0, pady=10, padx=20)
 
-        self.combobox_2 = customtkinter.CTkOptionMenu(master=self.frame_left,
+        self.Parametre2 = customtkinter.CTkOptionMenu(master=self.frame_left,
                                                     values=["2. Sütun","Product", "Issue"])
-        self.combobox_2.grid(row=3, column=0, pady=10, padx=20)
-
-
-        #----- THREAD SAYISI ----
+        self.Parametre2.grid(row=3, column=0, pady=10, padx=20)
     
         
-        self.entry = customtkinter.CTkEntry(master=self.frame_left,
+        self.ThreadSayısı = customtkinter.CTkEntry(master=self.frame_left,
                                             width=120,
                                             placeholder_text="Thread Sayısı")
-        self.entry.grid(row=4, column=0, pady=10, padx=20)
-
-        def change(val):
-            print(str(val))
-                     
-        self.progressbar = customtkinter.CTkProgressBar(master=self.frame_info,)
-        self.progressbar.grid(row=7, column=0, sticky="ew", padx=10, pady=10)
+        self.ThreadSayısı.grid(row=4, column=0, pady=10, padx=20)
             
-        self.slider_2 = customtkinter.CTkSlider(master=self.frame_left,
-                                                command=change,
+        self.slider_1 = customtkinter.CTkSlider(master=self.frame_left,
+                                                command=self.change,
                                                 from_=0,
+                                                number_of_steps=10,
                                                 to=100
                                                 )
-        self.slider_2.grid(row=5, column=0, columnspan=2, pady=10, padx=20, sticky="we")
-
-        self.slider_2.set(0.7)
-        self.progressbar.set(0.5)
-        
+        self.slider_1.grid(row=6, column=0, columnspan=2, pady=10, padx=20, sticky="we")
 
         self.button_1 = customtkinter.CTkButton(master=self.frame_left,
                                                 text="ARA",
                                                 border_width=2,
                                                 fg_color=None,
                                                 command=self.button_event)
-        self.button_1.grid(row=7, column=0, pady=20, padx=20)
+        self.button_1.grid(row=10, column=0, pady=20, padx=20)
 
         self.label_mode = customtkinter.CTkLabel(master=self.frame_left, text="Appearance Mode:")
-        self.label_mode.grid(row=9, column=0, pady=0, padx=20, sticky="w")
+        self.label_mode.grid(row=13, column=0, pady=0, padx=20, sticky="w")
 
         self.optionmenu_1 = customtkinter.CTkOptionMenu(master=self.frame_left,
                                                         values=["Light", "Dark", "System"],
                                                         command=self.change_appearance_mode)
-        self.optionmenu_1.grid(row=10, column=0, pady=10, padx=20, sticky="w")
+        self.optionmenu_1.grid(row=14, column=0, pady=10, padx=20, sticky="w")
+    
+    
+    def change(self,val):
+        print(str(val))
+        self.BenzerlikOranı = customtkinter.CTkLabel(master=self.frame_left,width=150,fg_color="white",text="Benzerlik Oranı %" + str(val))
+        self.BenzerlikOranı.grid(row=5, column=0,pady=10)
 
 
     def button_event(self):
-        self.label_mode2 = customtkinter.CTkLabel(master=self.frame_left,text="" + str(self.entry.get()))
-        self.label_mode2.grid(row=6, column=0, pady=0, padx=20, sticky="w")
+        self.label_mode2 = customtkinter.CTkLabel(master=self.frame_left,text="" + str(self.ThreadSayısı.get()))
+        self.label_mode2.grid(row=11, column=0, pady=0, padx=20, sticky="w")
 
     def change_appearance_mode(self, new_appearance_mode):
         customtkinter.set_appearance_mode(new_appearance_mode)
