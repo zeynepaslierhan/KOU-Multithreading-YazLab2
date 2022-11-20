@@ -3,14 +3,15 @@ from tkinter import ttk
 import tkinter.messagebox
 import customtkinter
 
+
 customtkinter.set_appearance_mode("Light")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "green", "dark-blue"
 
 
 class App(customtkinter.CTk):
 
-    WIDTH = 780
-    HEIGHT = 520
+    WIDTH = 1280
+    HEIGHT = 720
 
     def __init__(self):
         super().__init__()
@@ -44,7 +45,7 @@ class App(customtkinter.CTk):
         self.frame_right.columnconfigure((0, 1), weight=1)
         self.frame_right.columnconfigure(2, weight=0)
 
-        self.frame_info = customtkinter.CTkFrame(master=self.frame_right)
+        self.frame_info = customtkinter.CTkFrame(master=self.frame_right,)
         self.frame_info.grid(row=0, column=0, columnspan=2, rowspan=4, pady=20, padx=20, sticky="nsew")
 
         # ============ frame_info ============
@@ -60,7 +61,8 @@ class App(customtkinter.CTk):
                                                    height=100,
                                                    corner_radius=6,  # <- custom corner radius
                                                    fg_color=("white", "gray38"),  # <- custom tuple-color
-                                                   justify=tkinter.LEFT)
+                                                   justify=tkinter.LEFT,
+                                                   )
         self.label_info_1.grid(column=0, row=0, sticky="nwe", padx=15, pady=15)
 
 
@@ -80,10 +82,6 @@ class App(customtkinter.CTk):
         self.Parametre1= customtkinter.CTkOptionMenu(master=self.frame_left,
                                                     values=["Product", "Issue"])
         self.Parametre1.grid(row=2, column=0, pady=10, padx=20)
-
-        self.Parametre2 = customtkinter.CTkOptionMenu(master=self.frame_left,
-                                                    values=["2. Sütun","Product", "Issue"])
-        self.Parametre2.grid(row=3, column=0, pady=10, padx=20)
     
         
         self.ThreadSayısı = customtkinter.CTkEntry(master=self.frame_left,
