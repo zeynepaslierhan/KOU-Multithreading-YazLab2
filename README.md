@@ -47,4 +47,6 @@ Multithreading işlemlerinin nasıl yapıldığını incelemek için  [mutlithre
 4. [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtoC6GglhF3ncJ5rLwQrLGnV)
 5. [TomSchimansky, Custom Tkinter](https://github.com/TomSchimansky/CustomTkinter)
 6. [CSV dosyalarıyla işlemler](https://www.analyticsvidhya.com/blog/2021/08/python-tutorial-working-with-csv-file-for-data-science/)
+7. [Arthur DEKA, Custom Tkinter](https://github.com/ArthurDEKA/Customtkinter-Templates)
+8. [CSV dosyasının GUI'ye yansıtılması](https://stackoverflow.com/questions/71034460/display-csv-with-tkinter)
 
