@@ -1,4 +1,5 @@
-import tkinter
+from tkinter import *
+from tkinter import ttk
 import tkinter.messagebox
 import customtkinter
 
@@ -70,22 +71,29 @@ class App(customtkinter.CTk):
 
 
         #----- THREAD SAYISI ----
-
+    
+        
         self.entry = customtkinter.CTkEntry(master=self.frame_left,
                                             width=120,
                                             placeholder_text="Thread Sayısı")
         self.entry.grid(row=4, column=0, pady=10, padx=20)
 
-    
-        self.progressbar = customtkinter.CTkProgressBar(master=self.frame_info)
-        self.progressbar.grid(row=7, column=0, sticky="ew", padx=15, pady=15)
-
+        def change(val):
+            print(str(val))
+                     
+        self.progressbar = customtkinter.CTkProgressBar(master=self.frame_info,)
+        self.progressbar.grid(row=7, column=0, sticky="ew", padx=10, pady=10)
+            
         self.slider_2 = customtkinter.CTkSlider(master=self.frame_left,
-                                                command=self.progressbar.set)
+                                                command=change,
+                                                from_=0,
+                                                to=100
+                                                )
         self.slider_2.grid(row=5, column=0, columnspan=2, pady=10, padx=20, sticky="we")
 
         self.slider_2.set(0.7)
         self.progressbar.set(0.5)
+        
 
         self.button_1 = customtkinter.CTkButton(master=self.frame_left,
                                                 text="ARA",
@@ -104,7 +112,8 @@ class App(customtkinter.CTk):
 
 
     def button_event(self):
-        print("Button pressed")
+        self.label_mode2 = customtkinter.CTkLabel(master=self.frame_left,text="" + str(self.entry.get()))
+        self.label_mode2.grid(row=6, column=0, pady=0, padx=20, sticky="w")
 
     def change_appearance_mode(self, new_appearance_mode):
         customtkinter.set_appearance_mode(new_appearance_mode)
