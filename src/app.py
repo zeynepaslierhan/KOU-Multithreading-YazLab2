@@ -4,6 +4,7 @@ import tkinter
 from tkinter.ttk import *
 import csv
 import multithreading as mt
+import create_LastData as lstData
         
 
 root = Tk()
@@ -33,6 +34,7 @@ def degiskenal():
         
     mt.searching_with_mutlithreading(int(val_columns),int(val_threshold),int(val_thread))
     
+    lstData.lastData()
     filepath = "C:/Users/hkf_4/Documents/GitHub/KOU-Multithreading-YazLab2/src/data_set/LastData.csv"
     
     with open(filepath) as f:
