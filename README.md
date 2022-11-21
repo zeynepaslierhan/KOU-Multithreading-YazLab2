@@ -20,9 +20,7 @@ Bu veri seti; finansal ürünler ve hizmetler hakkında alınan gerçek dünya �
 
 ### Veri Setini Projede kullanabilmek için
 
-Projede veri setini kullanabilmek için dosya uzantılarını değiştirin. Ya da:
-1. src klasörü içerisine data_set klasörü ekleyin.
-2. data_set klasörünü içerisine yüklenilen veri setinin ismini "originalData.csv" olarak ayarlayın.
+Projede veri setini kullanabilmek için dosya uzantılarını değiştirin.
 
 ## Kodlar
 
