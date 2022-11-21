@@ -4,6 +4,10 @@ import threading
 import time
 
 def searching_with_mutlithreading(column,threshold,thread):
+    if thread == 1:
+        t = threading.Thread(target = th_csv.threshold_func, name='thread{}'.format(j),args = (0,0,column,threshold))
+        t.start()
+        t.join()
     
     if thread % 2 == 0:
         thread= thread + 1
@@ -12,14 +16,14 @@ def searching_with_mutlithreading(column,threshold,thread):
     threads=[]
     j=0
     for i in range(thread-2):
-        t = threading.Thread(target = th_csv.threshold_func, name='thread{}'.format(j),args = ('thread{}'.format(j),'thread{}'.format(j)))
+        t = threading.Thread(target = th_csv.threshold_func, name='thread{}'.format(j),args = (j,j,column,threshold))
         threads.append(t)
         t.start()
         print('{} başladı\n'.format(t.name))
         j=j+1
     
     for i in range(thread-3):
-        t = threading.Thread(target = th_csv.threshold_func, name='thread{}'.format(j),args = ('thread{}'.format(i),'thread{}'.format(i+1)))
+        t = threading.Thread(target = th_csv.threshold_func, name='thread{}'.format(j),args = (i,i+1,column,threshold))
         threads.append(t)
         t.start()
         print('{} başladı\n'.format(t.name))
