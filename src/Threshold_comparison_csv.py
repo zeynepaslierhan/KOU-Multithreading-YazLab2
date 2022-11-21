@@ -25,11 +25,11 @@ def threshold_func(file1,file2,column,threshold):
 
     data = pd.read_csv(fileName1)
     len_file1= (len(data))
-    print("1.csv Satır sayısı="+str(len_file1)+"\n")
+    print(fileName1+" Satır sayısı="+str(len_file1)+"\n")
 
-    data = pd.read_csv(str(file2)+".csv")
+    data = pd.read_csv(fileName2)
     len_file2= (len(data))
-    print("2.csv Satır sayısı="+str(len_file2)+"\n")
+    print(fileName2+" Satır sayısı="+str(len_file2)+"\n")
 
     with open(fileName1) as file1:
         content1 = file1.readlines()
