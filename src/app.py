@@ -22,8 +22,26 @@ def degiskenal():
     val_threshold = entry2.get()
     val_columns = option1.get()
     
-    mt.searching_with_mutlithreading(val_columns,val_threshold,val_thread)
-
+    if val_columns == 'Product':
+        val_columns = 1
+        
+    elif val_columns == 'Issue':
+        val_columns = 2
+        
+    else: 
+        val_columns =3
+        
+    mt.searching_with_mutlithreading(int(val_columns),int(val_threshold),int(val_thread))
+    
+    filepath = "C:/Users/hkf_4/Documents/GitHub/KOU-Multithreading-YazLab2/src/data_set/LastData.csv"
+    
+    with open(filepath) as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            Product = row['Complaint ID 1']
+            Issue = row['Complaint ID 2']
+            Company = row['threshold']
+            tree.insert("", 0, values=(Product, Issue, Company))
 
 frame1 = Frame(root)
 frame1.pack(side=TOP, fill=BOTH)
@@ -66,13 +84,13 @@ TableMargin = Frame(root, width=700)
 TableMargin.pack(side=TOP,pady=50)
 scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
 scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
-tree = ttk.Treeview(TableMargin, columns=("Product", "Issue", "Company"), height=400, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+tree = ttk.Treeview(TableMargin, columns=("Complaint ID 1", "Complaint ID 2", "threshold"), height=400, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
 scrollbary.config(command=tree.yview)
 scrollbary.pack(side=RIGHT, fill=Y)
 scrollbarx.config(command=tree.xview)
-tree.heading('Product', text="Product", anchor=W)
-tree.heading('Issue', text="Issue", anchor=W)
-tree.heading('Company', text="Company", anchor=W)
+tree.heading('Complaint ID 1', text="Complaint ID 1", anchor=W)
+tree.heading('Complaint ID 2', text="Complaint ID 2", anchor=W)
+tree.heading('threshold', text="threshold", anchor=W)
 tree.column('#0', stretch=NO, minwidth=0, width=0)
 tree.column('#1', stretch=NO, minwidth=0, width=250)
 tree.column('#2', stretch=NO, minwidth=0, width=250)
@@ -81,16 +99,17 @@ tree.pack()
 
 
 
+try:
+    filepath = "C:/Users/hkf_4/Documents/GitHub/KOU-Multithreading-YazLab2/src/data_set/LastData.csv"
     
-filepath = "C:/Users/hkf_4/Documents/GitHub/KOU-Multithreading-YazLab2/src/data_set/LastData.csv"
-    
-with open(filepath) as f:
-    reader = csv.DictReader(f, delimiter=',')
-    for row in reader:
-        Product = row['Product']
-        Issue = row['Issue']
-        Company = row['Company']
-        tree.insert("", 0, values=(Product, Issue, Company))
-
+    with open(filepath) as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            Product = row['Complaint ID 1']
+            Issue = row['Complaint ID 2']
+            Company = row['threshold']
+            tree.insert("", 0, values=(Product, Issue, Company))
+except:
+    print("CSV Dosyası Bulunamadı!")
 
 root.mainloop()

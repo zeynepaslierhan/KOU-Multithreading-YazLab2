@@ -14,9 +14,9 @@ mycollection= mydb["Similarity"]
 
 def threshold_func(file1,file2,column,threshold):
 
-    fileName1=str(file1)+".csv"
+    fileName1='C:/Users/hkf_4/Documents/GitHub/KOU-Multithreading-YazLab2/src/divided_CsvFile/'+str(file1)+".csv"
     print(fileName1)
-    fileName2=str(file2)+".csv"
+    fileName2='C:/Users/hkf_4/Documents/GitHub/KOU-Multithreading-YazLab2/src/divided_CsvFile/'+str(file2)+".csv"
     print(fileName2)
 
 
