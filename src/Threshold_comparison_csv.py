@@ -1,6 +1,7 @@
 # MongoDb işlemleri için gerekli kütüphaneler eklendi
 import pymongo
 import pandas as pd
+import similarity as sm
 
 # Cluster için bağlantı sağlandı.
 myclient = pymongo.MongoClient("mongodb://zeynep:1234@ac-hfldnho-shard-00-00.z9rxq6v.mongodb.net:27017,ac-hfldnho-shard-00-01.z9rxq6v.mongodb.net:27017,ac-hfldnho-shard-00-02.z9rxq6v.mongodb.net:27017/?ssl=true&replicaSet=atlas-jk8908-shard-0&retryWrites=true&w=majority") 
@@ -50,7 +51,7 @@ def threshold_func(file1,file2,column,threshold):
                             break
                     rows = content2[j:]
                     ListRow2=rows[0].split(",")
-                    threshold2=similarity(ListRow1[column],ListRow2[column])
+                    threshold2=sm.similarity(ListRow1[column],ListRow2[column])
                     
                     #veriyi tutan dict
                     item = {}

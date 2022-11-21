@@ -1,5 +1,3 @@
-
-
 def divide_csvFile(part):
     filename=0
     csvfile = open("C:/Users/zerha/Documents/GitHub/KOU-Multithreading-YazLab2/src/data_set/littleData.csv", 'r').readlines()
