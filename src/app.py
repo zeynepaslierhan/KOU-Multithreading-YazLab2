@@ -15,6 +15,16 @@ x = (screen_width/2) - (width/2)
 y = (screen_height/2) - (height/2)
 root.geometry("%dx%d+%d+%d" % (width, height, x, y))
 
+def degiskenal():
+    
+    val_entry1 = entry1.get()
+    val_entry2 = entry2.get()
+    val_option = option1.get()
+    
+    print(val_entry1)
+    print(val_entry2)
+    print(val_option)
+
 
 frame1 = Frame(root)
 frame1.pack(side=TOP, fill=BOTH)
@@ -48,7 +58,7 @@ entry2.pack(side=LEFT,padx=1,pady=10)
 
 
 
-button2=tkinter.Button(frame1,text="ARA",height=2,width=20,background="lightgray")
+button2=tkinter.Button(frame1,text="ARA",height=2,width=20,background="lightgray",command=degiskenal)
 button2.pack(side=LEFT,padx=50,pady=10)
 
 
