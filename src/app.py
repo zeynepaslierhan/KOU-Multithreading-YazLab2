@@ -3,6 +3,7 @@ from tkinter import ttk
 import tkinter
 from tkinter.ttk import *
 import csv
+import multithreading as mt
         
 
 root = Tk()
@@ -17,13 +18,11 @@ root.geometry("%dx%d+%d+%d" % (width, height, x, y))
 
 def degiskenal():
     
-    val_entry1 = entry1.get()
-    val_entry2 = entry2.get()
-    val_option = option1.get()
+    val_thread = entry1.get()
+    val_threshold = entry2.get()
+    val_columns = option1.get()
     
-    print(val_entry1)
-    print(val_entry2)
-    print(val_option)
+    mt.searching_with_mutlithreading(val_columns,val_threshold,val_thread)
 
 
 frame1 = Frame(root)
@@ -83,7 +82,7 @@ tree.pack()
 
 
     
-filepath = "C:/Users/hkf_4/Documents/GitHub/KOU-Multithreading-YazLab2/src/data_set/littleData.csv"
+filepath = "C:/Users/hkf_4/Documents/GitHub/KOU-Multithreading-YazLab2/src/data_set/LastData.csv"
     
 with open(filepath) as f:
     reader = csv.DictReader(f, delimiter=',')
