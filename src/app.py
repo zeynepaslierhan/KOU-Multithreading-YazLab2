@@ -1,9 +1,10 @@
 import mutlithreading as th
-
+from pathlib import Path
 from tkinter import *
 from tkinter import ttk
 import tkinter.messagebox
 import customtkinter
+import csv
 
 
 customtkinter.set_appearance_mode("Light")  # Modes: "System" (standard), "Dark", "Light"
@@ -12,8 +13,8 @@ customtkinter.set_default_color_theme("green")  # Themes: "blue" (standard), "gr
 
 class App(customtkinter.CTk):
 
-    WIDTH = 900
-    HEIGHT = 500
+    WIDTH = 1200
+    HEIGHT = 800
 
     def __init__(self):
         super().__init__()
@@ -42,30 +43,85 @@ class App(customtkinter.CTk):
         # ============ frame_right ============
 
         # configure grid layout (3x7)
-        self.frame_right.rowconfigure((0, 1, 2, 3), weight=1)
-        self.frame_right.rowconfigure(7, weight=10)
-        self.frame_right.columnconfigure((0, 1), weight=1)
+        self.frame_right.rowconfigure((0, 1, 2, 3, 4, 5, 6), weight=1)
+        self.frame_right.rowconfigure(10, weight=14)
+        self.frame_right.columnconfigure((0, 1), weight=0,)
         self.frame_right.columnconfigure(2, weight=0)
 
-        self.frame_info = customtkinter.CTkFrame(master=self.frame_right,)
-        self.frame_info.grid(row=0, column=0, columnspan=2, rowspan=4, pady=20, padx=20, sticky="nsew")
+        #self.frame_info = customtkinter.CTkFrame(master=self.frame_right,)
+        #self.frame_info.grid(row=0, column=0, columnspan=2, rowspan=6, pady=20, padx=20, sticky="nsew")
+        
+        
+        
+        
 
         # ============ frame_info ============
 
         # configure grid layout (1x1)
-        self.frame_info.rowconfigure(0, weight=1)
-        self.frame_info.columnconfigure(0, weight=1)
+        #self.frame_info.rowconfigure(0, weight=1)
+        #self.frame_info.columnconfigure(0, weight=1)
 
-        self.label_info_1 = customtkinter.CTkLabel(master=self.frame_info,
-                                                   text="CTkLabel: Lorem ipsum dolor sit,\n" +
-                                                        "amet consetetur sadipscing elitr,\n" +
-                                                        "sed diam nonumy eirmod tempor" ,
-                                                   height=100,
-                                                   corner_radius=6,  # <- custom corner radius
-                                                   fg_color=("white", "gray38"),  # <- custom tuple-color
-                                                   justify=tkinter.LEFT,
-                                                   )
-        self.label_info_1.grid(column=0, row=0, sticky="nwe", padx=15, pady=15)
+        #self.label_info_1 = customtkinter.CTkLabel(master=self.frame_info,
+         #                                          text="CTkLabel: Lorem ipsum dolor sit,\n" +
+          #                                              "amet consetetur sadipscing elitr,\n" +
+           #                                             "sed diam nonumy eirmod tempor" ,
+            #                                       height=100,
+             #                                      corner_radius=6,  # <- custom corner radius
+              #                                     fg_color=("white", "gray38"),  # <- custom tuple-color
+               #                                    justify=tkinter.LEFT,
+                #                                   )
+        #self.label_info_1.grid(column=0, row=0, sticky="nwe", padx=15, pady=15)
+        
+        filepath = "C:/Users/hkf_4/Documents/GitHub/KOU-Multithreading-YazLab2/src/data_set/littleData.csv"
+        
+        File = open(filepath)
+        Reader = csv.reader(File)
+        Data = list(Reader)
+        del(Data[0])
+        
+        list_of_entries = []
+        for x in list (range(0,len(Data))):
+            list_of_entries.append(Data[x][0])
+            
+        
+        self.Product_Label = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="Product")
+        self.Product_Label.grid(row=0, column=0,sticky="w",)
+        
+        self.Issue_Label = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="Issue")
+        self.Issue_Label.grid(row=0, column=1,sticky="w",)
+        
+        self.Company_Label = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="Company")
+        self.Company_Label.grid(row=0, column=2,sticky="w")
+        
+        self.ZIP_code_Label = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="ZIP code")
+        self.ZIP_code_Label.grid(row=0, column=3,sticky="w",)
+        
+        self.State_Label = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="State")
+        self.State_Label.grid(row=0, column=4,sticky="w",)
+        
+        self.Complaint_ID_Label = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="Complaint ID")
+        self.Complaint_ID_Label.grid(row=0, column=5,sticky="w",)
+        
+        
+        
+        
+        self.Product_Label2 = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="Product")
+        self.Product_Label2.grid(row=0, column=0,sticky="w",)
+        
+        self.Issue_Label2 = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="Issue")
+        self.Issue_Label2.grid(row=0, column=1,sticky="w", )
+        
+        self.Company_Label2 = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="Company")
+        self.Company_Label2.grid(row=0, column=2,sticky="w",)
+        
+        self.ZIP_code_Label2 = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="ZIP code")
+        self.ZIP_code_Label2.grid(row=0, column=3,sticky="w",)
+        
+        self.Product_Label2 = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="State")
+        self.Product_Label2.grid(row=0, column=4,sticky="w", )
+        
+        self.Complaint_ID_Label2 = customtkinter.CTkLabel(master=self.frame_right,width=75,fg_color="white",text="Complaint ID")
+        self.Complaint_ID_Label2.grid(row=0, column=5,sticky="w",)
 
 
         # ============ frame_left ============
@@ -141,3 +197,46 @@ class App(customtkinter.CTk):
 if __name__ == "__main__":
     app = App()
     app.mainloop()
+    
+    
+    root = Tk()
+    root.title("Python Read CSV FILE")
+    width = 1200
+    height = 800
+    screen_width = root.winfo_screenwidth()
+    screen_height = root.winfo_screenheight()
+    x = (screen_width/2) - (width/2)
+    y = (screen_height/2) - (height/2)
+    root.geometry("%dx%d+%d+%d" % (width, height, x, y))
+    root.resizable(0, 0) 
+    TableMargin = Frame(root, width=500)
+    TableMargin.pack(side=TOP)
+    scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
+    scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
+    tree = ttk.Treeview(TableMargin, columns=("Product", "Issue", "Company"), height=400, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
+    scrollbary.config(command=tree.yview)
+    scrollbary.pack(side=RIGHT, fill=Y)
+    scrollbarx.config(command=tree.xview)
+    scrollbarx.pack(side=BOTTOM, fill=X)
+    tree.heading('Product', text="Product", anchor=W)
+    tree.heading('Issue', text="Issue", anchor=W)
+    tree.heading('Company', text="Company", anchor=W)
+    tree.column('#0', stretch=NO, minwidth=0, width=0)
+    tree.column('#1', stretch=NO, minwidth=0, width=200)
+    tree.column('#2', stretch=NO, minwidth=0, width=200)
+    tree.column('#3', stretch=NO, minwidth=0, width=300)
+    tree.pack()
+    
+    
+    filepath = "C:/Users/hkf_4/Documents/GitHub/KOU-Multithreading-YazLab2/src/data_set/littleData.csv"
+    
+    with open(filepath) as f:
+        reader = csv.DictReader(f, delimiter=',')
+        for row in reader:
+            Product = row['Product']
+            Issue = row['Issue']
+            Company = row['Company']
+            tree.insert("", 0, values=(Product, Issue, Company))
+
+if __name__ == '__main__':
+    root.mainloop()
